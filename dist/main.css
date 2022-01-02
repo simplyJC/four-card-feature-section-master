@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:link, a:active {
+  text-decoration: none;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  display: grid;
+  width: min(95%, 70rem);
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  margin: 5rem auto;
+  grid-template-areas: "header" "one" "two" "three" "four";
+}
+
+.header {
+  text-align: center;
+}
+.header__content {
+  margin: 1rem 0;
+  padding: 0 0.7rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.header-top-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.card {
+  border-top-style: solid;
+  border-top-width: 5px;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: -2px 7px 17px 1px rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+.card__icon {
+  max-width: 100%;
+  margin: 0.5rem 0;
+}
+.card__title {
+  text-align: left;
+}
+.card__content {
+  text-align: left;
+  margin: 0.5rem 0;
+}
+.card-cyan {
+  border-top-color: #45d3d3;
+}
+.card-red {
+  border-top-color: #ea5353;
+}
+.card-orange {
+  border-top-color: #fcaf4a;
+}
+.card-blue {
+  border-top-color: #549ef2;
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    background-color: cadetblue;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}/*# sourceMappingURL=main.css.map */
