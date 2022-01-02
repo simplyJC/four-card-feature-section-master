@@ -1,0 +1,41 @@
+@use 'font';
+@use 'color';
+.card{
+    @mixin card-properties ($color, $grid-area){
+        border-top-color: $color;
+        grid-area: $grid-area;
+    }
+    border-top-style: solid;
+    border-top-width: 5px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin:1rem;
+    box-shadow: -2px 7px 17px 1px rgba(0,0,0,0.20);
+    text-align: right;
+
+    &__icon{
+        max-width: 100%;
+        margin: .5rem 0; 
+    }
+    &__title{
+        text-align: left;
+    }
+    &__content{
+        text-align: left;
+        margin:.5rem 0;
+    }
+    &-cyan{
+        @include card-properties(color.$cyan, one ); 
+    }
+    &-red{
+        @include card-properties(color.$red, two); 
+       
+    }
+    &-orange{
+        @include card-properties(color.$orange, three); 
+
+    }
+    &-blue{
+        @include card-properties(color.$blue, four); 
+    }
+}

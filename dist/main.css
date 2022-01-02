@@ -9,38 +9,6 @@ a:link, a:active {
   text-decoration: none;
 }
 
-body {
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-}
-
-.main-container {
-  display: grid;
-  width: min(95%, 70rem);
-  grid-auto-columns: 1fr;
-  gap: 1rem;
-  margin: 5rem auto;
-  grid-template-areas: "header" "one" "two" "three" "four";
-}
-
-.header {
-  text-align: center;
-}
-.header__content {
-  margin: 1rem 0;
-  padding: 0 0.7rem;
-  font-size: 1rem;
-  font-weight: 400;
-}
-.header-top-text {
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-.header__title {
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-
 .card {
   border-top-style: solid;
   border-top-width: 5px;
@@ -63,20 +31,82 @@ body {
 }
 .card-cyan {
   border-top-color: #45d3d3;
+  grid-area: one;
 }
 .card-red {
   border-top-color: #ea5353;
+  grid-area: two;
 }
 .card-orange {
   border-top-color: #fcaf4a;
+  grid-area: three;
 }
 .card-blue {
   border-top-color: #549ef2;
+  grid-area: four;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  display: grid;
+  width: min(95%, 70rem);
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  margin: 5rem auto;
+  grid-template-areas: "header" "one" "two" "three" "four";
+}
+
+.header {
+  text-align: center;
+  grid-area: header;
+}
+.header__content {
+  margin: 1rem 0;
+  padding: 0 0.7rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-inline: auto;
+}
+.header-top-text {
+  font-weight: 200;
+  font-size: 2rem;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.very-dark-blue {
+  color: #4c4e61;
+}
+
+.grayish-blue {
+  color: #a3a5ae;
 }
 
 @media screen and (min-width: 900px) {
-  .card {
-    background-color: cadetblue;
+  .main-container {
+    grid-template-areas: "header header header" "one two four" "one three four";
+  }
+
+  .header__content {
+    width: 50%;
+  }
+
+  .card-cyan {
+    max-height: 258px;
+    max-width: 330px;
+    align-self: center;
+  }
+
+  .card-blue {
+    max-height: 258px;
+    max-width: 330px;
+    align-self: center;
   }
 }
 .attribution {
