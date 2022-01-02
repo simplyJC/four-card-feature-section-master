@@ -24,6 +24,7 @@ body{
    'four';
   
 }
+//Header
 .header{
     text-align: center;
     grid-area: header;
@@ -44,6 +45,7 @@ body{
     }
 }
 
+//text color
 .very-dark-blue{
     color: color.$very-dark-blue; 
 }
@@ -51,6 +53,8 @@ body{
     color: color.$grayish-blue;
  
 }
+
+//Desktop View
 
 @media screen and (min-width: 900px) {
     .main-container{
